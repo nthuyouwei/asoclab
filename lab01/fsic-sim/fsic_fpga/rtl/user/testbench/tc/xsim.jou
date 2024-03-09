@@ -2,8 +2,8 @@
 # xsim v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Sat Mar  9 10:27:42 2024
-# Process ID: 30668
+# Start of session at: Sat Mar  9 10:37:53 2024
+# Process ID: 30939
 # Current directory: /home/ubuntu/Desktop/github_asoclab/lab01/fsic-sim/fsic_fpga/rtl/user/testbench/tc
 # Command line: xsim -mode tcl -source {xsim.dir/tb_fsic_xelab/xsim_script.tcl}
 # Log file: /home/ubuntu/Desktop/github_asoclab/lab01/fsic-sim/fsic_fpga/rtl/user/testbench/tc/xsim.log

@@ -1,0 +1,2 @@
+rm -f *.vcd 
+rm -f *.log *.jou *.pb
