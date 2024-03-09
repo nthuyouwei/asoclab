@@ -5,11 +5,9 @@ This lab material is for Advanced SoC design course lab-1.
 ```
 $ cd fsic_fpga/rtl/user/testbench/tc
 $ ./run_xsim
+$ source run_clean
 ```
 
-## Update information
-If we have any modification of this directory, it will be described here:
-1. (2024.3.2 update) Add README.md in `/reference_FIR` to describe how to deal with those reference files
 
 <!--## Some annotation-->
 ## For more information
