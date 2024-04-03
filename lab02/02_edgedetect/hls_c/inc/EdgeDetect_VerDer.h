@@ -34,7 +34,7 @@
 #include <mc_scverify.h>
 
 
-//namespace EdgeDetect_IP {
+
 
   class EdgeDetect_VerDer
   {
@@ -111,7 +111,7 @@
             dy.write(pix); // derivative output
           }
           // programmable width exit condition
-          if (x4 == maxWType(widthIn/4-1)) { // cast to maxWType for RTL code coverage
+          if (x == maxWType(widthIn-4)) { // cast to maxWType for RTL code coverage
             break;
           }
         }
@@ -123,6 +123,6 @@
     }
   };
 
-//}
+
 
 

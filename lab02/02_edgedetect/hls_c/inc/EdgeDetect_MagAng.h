@@ -34,8 +34,7 @@
 #include <mc_scverify.h>
 
 
-//namespace EdgeDetect_IP 
-//{
+
   class EdgeDetect_MagAng
   {
   public:
@@ -52,31 +51,21 @@
                         uint32               &crc32_dat_out,
                         ac_channel<Stream_t> &dat_out)
     {
-     // gradType4x dx, dy;
-      //sqType dx_sq;
-      //sqType dy_sq;
-      //sumType sum; // fixed point integer for sqrt
-      //angType at;
-      //ac_fixed<16,9,false> sq_rt; // square-root return type
+
       
       
       gradType4x dx, dy;
       pixelType4x pix;
-      sqType dx_sq;
-      sqType dy_sq;
-      sumType sum; // fixed point integer for sqrt
-      ac_fixed<16,9,false> sq_rt; // square-root return type
+
       magType4x magn;
       magType4x magn_out;
       Stream_t dat;
-      maxWType x4;
       uint32 crc32_pix_in_tmp = 0XFFFFFFFF;
       uint32 crc32_dat_out_tmp = 0XFFFFFFFF;
   
       MROW: for (maxHType y = 0; ; y++) {
         #pragma hls_pipeline_init_interval 1
         MCOL: for (maxWType x = 0; ; x+=4) {
-          x4 = x / 4;
           
           dx = dx_in.read();
           dy = dy_in.read();
@@ -102,8 +91,8 @@
 
 
           dat.pix = magn_out;
-          dat.sof = (x4==0 && y==0);
-          dat.eol = (x4== maxWType(widthIn/4-1));
+          dat.sof = (x==0 && y==0);
+          dat.eol = (x== maxWType(widthIn-4));
 
           dat_out.write(dat);
    
@@ -111,7 +100,7 @@
           crc32_dat_out_tmp = calc_crc32<32>(crc32_dat_out_tmp, magn_out);
 
           // programmable width exit condition
-          if (x4 == maxWType(widthIn/4-1)) { // cast to maxWType for RTL code coverage
+          if (x == maxWType(widthIn-4)) { // cast to maxWType for RTL code coverage
             break;
           }
         }
@@ -155,6 +144,6 @@
   
   };
 
-//}
+
 
 
