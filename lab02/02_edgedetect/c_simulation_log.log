@@ -1,0 +1,516 @@
+//  Catapult Ultra Synthesis 2024.1/1091966 (Production Release) Wed Feb 14 09:07:18 PST 2024
+//  
+//          Copyright (c) Siemens EDA, 1996-2024, All Rights Reserved.
+//                        UNPUBLISHED, LICENSED SOFTWARE.
+//             CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//                   PROPERTY OF SIEMENS EDA OR ITS LICENSORS.
+//  
+//  Running on Linux u110020015@ws41:22673 3.10.0-1160.95.1.el7.x86_64 x86_64 aol
+//  
+//  Package information: SIFLIBS v27.1_0.0, HLS_PKGS v27.1_0.0, 
+//                       SIF_TOOLKITS v27.1_0.0, SIF_XILINX v27.1_0.0, 
+//                       SIF_ALTERA v27.1_0.0, CCS_LIBS v27.1_0.0, 
+//                       CDS_PPRO v2023.2_3, CDS_DesignChecker v2024.1, 
+//                       CDS_OASYS v21.1_3.1, CDS_PSR v23.2_0.16, 
+//                       DesignPad v2.78_1.0, DesignAnalyzer 2024.1/1090934
+//  
+//  Start time Wed Apr  3 16:57:36 2024
+# -------------------------------------------------
+# Logging session transcript to file "/tmp/log22673b82d6cb1.0"
+dofile ./directives.tcl
+# > solution new -state initial
+# Info: Branching solution 'solution.v2' at state 'initial' (PRJ-2)
+# solution.v2
+# > solution options defaults
+# > solution options set /Input/CppStandard c++11
+# c++11
+# > solution options set /Input/TargetPlatform x86_64
+# x86_64
+# > solution options set /Input/SearchPath {../bmpUtil/inc ../cmodel/inc ../hls_c/inc}
+# ../bmpUtil/inc ../cmodel/inc ../hls_c/inc
+# > solution options set /Output/OutputVHDL false
+# false
+# > solution options set /Output/GenerateCycleNetlist false
+# false
+# > solution options set /Output/Basename {extract {${ENTITY}}}
+# extract {${ENTITY}}
+# > solution options set /Flows/SCVerify/INVOKE_ARGS {./image/people640x360_rgb.bmp 1 out_algorithm.bmp out_hw.bmp}
+# ./image/people640x360_rgb.bmp 1 out_algorithm.bmp out_hw.bmp
+# > solution file add ../hls_c/inc/EdgeDetect.h -type CHEADER
+# /INPUTFILES/1
+# > solution file add ../hls_c/src/EdgeDetect_tb.cpp -type C++ -exclude true
+# /INPUTFILES/2
+# > solution file add ../bmpUtil/src/bmp_io.cpp -type C++ -exclude true
+# /INPUTFILES/3
+# > directive set -REGISTER_THRESHOLD 65536
+# /REGISTER_THRESHOLD 65536
+# > go new
+# > go analyze
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+# Creating project directory '/home/course/u110020015/asoc_lab2/catapult-for-soc-course/lab2_edgedetec_fsic/02_edgedetect_fsic/catapult_work/Catapult/'. (PRJ-1)
+# Moving session transcript to file "/home/course/u110020015/asoc_lab2/catapult-for-soc-course/lab2_edgedetec_fsic/02_edgedetect_fsic/catapult_work/catapult.log"
+# Front End called with arguments: -I../bmpUtil/inc -I../cmodel/inc -I../hls_c/inc -- /home/course/u110020015/asoc_lab2/catapult-for-soc-course/lab2_edgedetec_fsic/02_edgedetect_fsic/hls_c/inc/EdgeDetect.h (CIN-69)
+# Edison Design Group C++/C Front End - Version 6.3 (CIN-1)
+# $MGC_HOME/shared/include/ac_std_float.h(180): Pragma 'hls_design<>' detected on routine 'ac::fx_div<8>' (CIN-6)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect.h(42): Pragma 'hls_design<top>' detected on class 'EdgeDetect_Top' (CIN-6)
+# Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v2': elapsed time 6.88 seconds, memory usage 1616600kB, peak memory usage 1616600kB (SOL-9)
+# > go compile
+# Info: Starting transformation 'compile' on solution 'EdgeDetect_Top.v1' (SOL-8)
+# Generating synthesis internal form... (CIN-3)
+# $MGC_HOME/shared/include/ac_std_float.h(184): Found design routine 'ac::fx_div<8>' specified by directive (CIN-52)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect.h(42): Found top design routine 'EdgeDetect_Top' specified by directive (CIN-52)
+# Warning: $PROJECT_HOME/../hls_c/inc/EdgeDetect_defs.h(46): Instantiating global variable 'kernel1' which may be accessed outside this scope (CIN-18)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect.h(56): Inlining member function 'EdgeDetect_Top::EdgeDetect_Top' on object '' (CIN-64)
+# Warning: $PROJECT_HOME/../hls_c/inc/EdgeDetect_defs.h(46): Instantiating global variable 'kernel1' which may be accessed outside this scope (CIN-18)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_VerDer.h(44): Inlining member function 'EdgeDetect_VerDer::EdgeDetect_VerDer' on object '' (CIN-64)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_VerDer.h(47): Synthesizing method 'EdgeDetect_VerDer::run' (CIN-13)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_VerDer.h(47): Inlining member function 'EdgeDetect_VerDer::run' on object '' (CIN-64)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_VerDer.h(66): Pragma 'hls_pipeline_init_interval<1>' detected on '/EdgeDetect_VerDer/run/VCOL' (CIN-203)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator/<10, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator-<9, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator&<10, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator==<32, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator&<10, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator==<32, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator/<10, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator/<10, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator/<10, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator/<10, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator&<10, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator==<32, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator&<10, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator==<32, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator==<9, false>' (CIN-14)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_VerDer.h(103): Pragma 'hls_unroll<yes>' detected on '/EdgeDetect_VerDer/run/VCOL:for' (CIN-203)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator*<8, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator*<8, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator*<8, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator!=<9, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator/<10, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator-<11, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator+=<10, false>' (CIN-14)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_VerDer.h(47): Optimizing block '/EdgeDetect_VerDer' ... (CIN-4)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_VerDer.h(47): INOUT port 'din_chn' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_VerDer.h(48): INOUT port 'widthIn' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_VerDer.h(49): INOUT port 'heightIn' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_VerDer.h(50): INOUT port 'dat_in_hor' is only used as an output. (OPT-11)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_VerDer.h(51): INOUT port 'dy' is only used as an output. (OPT-11)
+# Info: $PROJECT_HOME/../hls_c/inc/EdgeDetect_VerDer.h(44): Partition '/EdgeDetect_VerDer/constructor' is found empty and is optimized away. (OPT-12)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_VerDer.h(104): Loop '/EdgeDetect_VerDer/run/VCOL:for' iterated at most 4 times. (LOOP-2)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect.h(56): Creating instance '/EdgeDetect_Top/VerDer_inst' of C Hierarchy 'EdgeDetect_VerDer' (CIN-204)
+# Warning: $PROJECT_HOME/../hls_c/inc/EdgeDetect_defs.h(46): Instantiating global variable 'kernel1' which may be accessed outside this scope (CIN-18)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(41): Inlining member function 'EdgeDetect_HorDer::EdgeDetect_HorDer' on object '' (CIN-64)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(44): Synthesizing method 'EdgeDetect_HorDer::run' (CIN-13)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(44): Inlining member function 'EdgeDetect_HorDer::run' on object '' (CIN-64)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(61): Pragma 'hls_pipeline_init_interval<1>' detected on '/EdgeDetect_HorDer/run/HCOL' (CIN-203)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator/<10, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator/<10, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator-<11, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator==<10, false>' (CIN-14)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(71): Pragma 'hls_unroll<yes>' detected on '/EdgeDetect_HorDer/run/HCOL:if#1:for' (CIN-203)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(74): Pragma 'hls_unroll<yes>' detected on '/EdgeDetect_HorDer/run/HCOL:if#1:for#1' (CIN-203)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator/<10, false>' (CIN-14)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(81): Pragma 'hls_unroll<yes>' detected on '/EdgeDetect_HorDer/run/HCOL:else#1:if:for' (CIN-203)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(88): Pragma 'hls_unroll<yes>' detected on '/EdgeDetect_HorDer/run/HCOL:else#1:else:for' (CIN-203)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(92): Pragma 'hls_unroll<yes>' detected on '/EdgeDetect_HorDer/run/HCOL:else#1:else:for#1' (CIN-203)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(98): Pragma 'hls_unroll<yes>' detected on '/EdgeDetect_HorDer/run/HCOL:for' (CIN-203)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator*<8, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator*<8, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator*<8, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator!=<10, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator/<10, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator+=<10, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator-<9, false>' (CIN-14)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(44): Optimizing block '/EdgeDetect_HorDer' ... (CIN-4)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(44): INOUT port 'dat_in' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(45): INOUT port 'widthIn' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(46): INOUT port 'heightIn' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(47): INOUT port 'dx' is only used as an output. (OPT-11)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(48): INOUT port 'dat_out' is only used as an output. (OPT-11)
+# Info: $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(41): Partition '/EdgeDetect_HorDer/constructor' is found empty and is optimized away. (OPT-12)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(72): Loop '/EdgeDetect_HorDer/run/HCOL:if#1:for' iterated at most 4 times. (LOOP-2)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(75): Loop '/EdgeDetect_HorDer/run/HCOL:if#1:for#1' iterated at most 4 times. (LOOP-2)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(82): Loop '/EdgeDetect_HorDer/run/HCOL:else#1:if:for' iterated at most 5 times. (LOOP-2)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(89): Loop '/EdgeDetect_HorDer/run/HCOL:else#1:else:for' iterated at most 5 times. (LOOP-2)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(93): Loop '/EdgeDetect_HorDer/run/HCOL:else#1:else:for#1' iterated at most 4 times. (LOOP-2)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(99): Loop '/EdgeDetect_HorDer/run/HCOL:for' iterated at most 4 times. (LOOP-2)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(108): Loop '/EdgeDetect_HorDer/run/HCOL:if#2:for' iterated at most 4 times. (LOOP-2)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect.h(56): Creating instance '/EdgeDetect_Top/HorDer_inst' of C Hierarchy 'EdgeDetect_HorDer' (CIN-204)
+# Warning: $PROJECT_HOME/../hls_c/inc/EdgeDetect_defs.h(46): Instantiating global variable 'kernel1' which may be accessed outside this scope (CIN-18)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(42): Inlining member function 'EdgeDetect_MagAng::EdgeDetect_MagAng' on object '' (CIN-64)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(45): Synthesizing method 'EdgeDetect_MagAng::run' (CIN-13)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(45): Inlining member function 'EdgeDetect_MagAng::run' on object '' (CIN-64)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(77): Pragma 'hls_pipeline_init_interval<1>' detected on '/EdgeDetect_MagAng/run/MCOL' (CIN-203)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator/<10, false>' (CIN-14)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(87): Pragma 'hls_unroll<yes>' detected on '/EdgeDetect_MagAng/run/MCOL:for' (CIN-203)
+# $MGC_HOME/shared/include/ac_math/ac_abs.h(122): Inlining routine 'ac_math::ac_abs<9, 8>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator<<9, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_math/ac_abs.h(122): Inlining routine 'ac_math::ac_abs<9, 8>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator<<9, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator==<10, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator==<9, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator/<10, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator-<11, true>' (CIN-14)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(130): Inlining member function 'EdgeDetect_MagAng::calc_crc32<32>' on object '' (CIN-64)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(135): Pragma 'hls_unroll<yes>' detected on '/EdgeDetect_MagAng/run/EdgeDetect_MagAng::calc_crc32<32>:for' (CIN-203)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(142): Pragma 'hls_unroll<yes>' detected on '/EdgeDetect_MagAng/run/EdgeDetect_MagAng::calc_crc32<32>:for:for' (CIN-203)
+# $MGC_HOME/shared/include/ac_int.h(2947): Inlining routine 'operator&<1, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2585): Inlining member function 'ac_int<31, false>::ac_bitref::operator=<1, false>' on object 'bitref' (CIN-64)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(130): Inlining member function 'EdgeDetect_MagAng::calc_crc32<32>' on object '' (CIN-64)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(135): Pragma 'hls_unroll<yes>' detected on '/EdgeDetect_MagAng/run/EdgeDetect_MagAng::calc_crc32<32>#1:for' (CIN-203)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(142): Pragma 'hls_unroll<yes>' detected on '/EdgeDetect_MagAng/run/EdgeDetect_MagAng::calc_crc32<32>#1:for:for' (CIN-203)
+# $MGC_HOME/shared/include/ac_int.h(2947): Inlining routine 'operator&<1, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2585): Inlining member function 'ac_int<31, false>::ac_bitref::operator=<1, false>' on object 'bitref' (CIN-64)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator/<10, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator-<11, true>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator+=<10, false>' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator-<9, false>' (CIN-14)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(45): Optimizing block '/EdgeDetect_MagAng' ... (CIN-4)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(45): INOUT port 'dx_in' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(46): INOUT port 'dy_in' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(47): INOUT port 'widthIn' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(48): INOUT port 'heightIn' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(49): INOUT port 'pix_in' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(50): INOUT port 'sw_in' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(51): INOUT port 'crc32_pix_in' is only used as an output. (OPT-11)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(52): INOUT port 'crc32_dat_out' is only used as an output. (OPT-11)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(53): INOUT port 'dat_out' is only used as an output. (OPT-11)
+# Info: $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(42): Partition '/EdgeDetect_MagAng/constructor' is found empty and is optimized away. (OPT-12)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(88): Loop '/EdgeDetect_MagAng/run/MCOL:for' iterated at most 4 times. (LOOP-2)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(143): Loop '/EdgeDetect_MagAng/run/EdgeDetect_MagAng::calc_crc32<32>:for:for' iterated at most 31 times. (LOOP-2)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(136): Loop '/EdgeDetect_MagAng/run/EdgeDetect_MagAng::calc_crc32<32>:for' iterated at most 32 times. (LOOP-2)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(143): Loop '/EdgeDetect_MagAng/run/EdgeDetect_MagAng::calc_crc32<32>#1:for:for' iterated at most 31 times. (LOOP-2)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(136): Loop '/EdgeDetect_MagAng/run/EdgeDetect_MagAng::calc_crc32<32>#1:for' iterated at most 32 times. (LOOP-2)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect.h(56): Creating instance '/EdgeDetect_Top/MagAng_inst' of C Hierarchy 'EdgeDetect_MagAng' (CIN-204)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect.h(63): Synthesizing method 'EdgeDetect_Top::run' (CIN-13)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect.h(63): Inlining member function 'EdgeDetect_Top::run' on object '' (CIN-64)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect.h(63): Optimizing block '/EdgeDetect_Top' ... (CIN-4)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect.h(63): INOUT port 'widthIn' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect.h(64): INOUT port 'heightIn' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect.h(65): INOUT port 'sw_in' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect.h(66): INOUT port 'crc32_hw_pix_in' is only used as an output. (OPT-11)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect.h(67): INOUT port 'crc32_hw_pix_out' is only used as an output. (OPT-11)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect.h(68): INOUT port 'din_chn' is only used as an input. (OPT-10)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect.h(69): INOUT port 'dout_chn' is only used as an output. (OPT-11)
+# Info: $PROJECT_HOME/../hls_c/inc/EdgeDetect.h(56): Partition '/EdgeDetect_Top/constructor' is found empty and is optimized away. (OPT-12)
+# Design 'EdgeDetect_Top' was read (SOL-1)
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Warning: Hierarchical design detected - SLEC-CPC does not support design with hierarchy
+# Info: CDesignChecker Shell script written to '/home/course/u110020015/asoc_lab2/catapult-for-soc-course/lab2_edgedetec_fsic/02_edgedetect_fsic/catapult_work/Catapult/EdgeDetect_Top.v1/CDesignChecker/design_checker.sh'
+# Info: Completed transformation 'compile' on solution 'EdgeDetect_Top.v1': elapsed time 6.98 seconds, memory usage 1682136kB, peak memory usage 1682136kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 734, Real ops = 198, Vars = 248 (SOL-21)
+# > solution library add nangate-45nm_beh -- -rtlsyntool DesignCompiler -vendor Nangate -technology 045nm
+# > solution library add ccs_sample_mem
+# > solution library add amba
+# > go libraries
+# Info: Starting transformation 'libraries' on solution 'EdgeDetect_Top.v1' (SOL-8)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/fpops.lib' [FPOPS]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/ccs_dw_ops.lib' [CCS_DW_OPS]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/ccs_connections.lib' [ccs_connections]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/nangate/nangate-45nm_beh.lib' [nangate-45nm_beh]... (LIB-49)
+# Warning: Component library 'nangate-45nm_beh' created with a newer version of Catapult Library Builder, 2024.2/1091566 > 2024.1/1091966 (LIB-83)
+# Reading component library '$MGC_HOME/pkgs/siflibs/ccs_sample_mem.lib' [ccs_sample_mem]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/ccs_libs/interfaces/amba/amba.lib' [amba]... (LIB-49)
+# Info: Completed transformation 'libraries' on solution 'EdgeDetect_Top.v1': elapsed time 0.62 seconds, memory usage 1682136kB, peak memory usage 1682136kB (SOL-9)
+# Info: Design complexity at end of 'libraries': Total ops = 734, Real ops = 198, Vars = 248 (SOL-21)
+# > directive set -CLOCKS {clk {-CLOCK_PERIOD 10.0 -CLOCK_EDGE rising -CLOCK_UNCERTAINTY 0.0 -CLOCK_HIGH_TIME 5.0 -RESET_SYNC_NAME rst -RESET_ASYNC_NAME arst_n -RESET_KIND both -RESET_SYNC_ACTIVE high -RESET_ASYNC_ACTIVE low -ENABLE_ACTIVE high}}
+# /CLOCKS {clk {-CLOCK_PERIOD 10.0 -CLOCK_EDGE rising -CLOCK_UNCERTAINTY 0.0 -CLOCK_HIGH_TIME 5.0 -RESET_SYNC_NAME rst -RESET_ASYNC_NAME arst_n -RESET_KIND both -RESET_SYNC_ACTIVE high -RESET_ASYNC_ACTIVE low -ENABLE_ACTIVE high}}
+# > go assembly
+# Info: Starting transformation 'assembly' on solution 'EdgeDetect_Top.v1' (SOL-8)
+# Info: $PROJECT_HOME/../hls_c/inc/EdgeDetect.h(63): Partition '/EdgeDetect_Top/run' is found empty and is optimized away. (OPT-12)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect.h(63): Variable '/EdgeDetect_Top/widthIn' connected to multiple blocks (ASM-35)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect.h(63): Variable '/EdgeDetect_Top/widthIn' connected to multiple blocks (ASM-35)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect.h(64): Variable '/EdgeDetect_Top/heightIn' connected to multiple blocks (ASM-35)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect.h(64): Variable '/EdgeDetect_Top/heightIn' connected to multiple blocks (ASM-35)
+# Info: Completed transformation 'assembly' on solution 'EdgeDetect_Top.v1': elapsed time 0.94 seconds, memory usage 1682136kB, peak memory usage 1682136kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 727, Real ops = 201, Vars = 253 (SOL-21)
+# > directive set /EdgeDetect_Top/widthIn:rsc -MAP_TO_MODULE {[DirectInput]}
+# /EdgeDetect_Top/widthIn:rsc/MAP_TO_MODULE {[DirectInput]}
+# > directive set /EdgeDetect_Top/heightIn:rsc -MAP_TO_MODULE {[DirectInput]}
+# /EdgeDetect_Top/heightIn:rsc/MAP_TO_MODULE {[DirectInput]}
+# > directive set /EdgeDetect_Top/sw_in:rsc -MAP_TO_MODULE {[DirectInput]}
+# /EdgeDetect_Top/sw_in:rsc/MAP_TO_MODULE {[DirectInput]}
+# > directive set /EdgeDetect_Top/din_chn:rsc -MAP_TO_MODULE ccs_ioport.ccs_in_wait
+# /EdgeDetect_Top/din_chn:rsc/MAP_TO_MODULE ccs_ioport.ccs_in_wait
+# > directive set /EdgeDetect_Top/dout_chn:rsc -MAP_TO_MODULE ccs_ioport.ccs_out_wait
+# /EdgeDetect_Top/dout_chn:rsc/MAP_TO_MODULE ccs_ioport.ccs_out_wait
+# > directive set /EdgeDetect_Top/EdgeDetect_VerDer/run/VROW -PIPELINE_INIT_INTERVAL 1
+# /EdgeDetect_Top/EdgeDetect_VerDer/run/VROW/PIPELINE_INIT_INTERVAL 1
+# > directive set /EdgeDetect_Top/EdgeDetect_HorDer/run/HROW -PIPELINE_INIT_INTERVAL 1
+# /EdgeDetect_Top/EdgeDetect_HorDer/run/HROW/PIPELINE_INIT_INTERVAL 1
+# > directive set /EdgeDetect_Top/EdgeDetect_MagAng/run/MROW -PIPELINE_INIT_INTERVAL 1
+# /EdgeDetect_Top/EdgeDetect_MagAng/run/MROW/PIPELINE_INIT_INTERVAL 1
+# > directive set /EdgeDetect_Top/dat_in_hor:cns -FIFO_DEPTH 0
+# /EdgeDetect_Top/dat_in_hor:cns/FIFO_DEPTH 0
+# > directive set /EdgeDetect_Top/dy:cns -FIFO_DEPTH 2
+# /EdgeDetect_Top/dy:cns/FIFO_DEPTH 2
+# > directive set /EdgeDetect_Top/dat_in_mag:cns -FIFO_DEPTH 0
+# /EdgeDetect_Top/dat_in_mag:cns/FIFO_DEPTH 0
+# > directive set /EdgeDetect_Top/dx:cns -FIFO_DEPTH 0
+# /EdgeDetect_Top/dx:cns/FIFO_DEPTH 0
+# > directive set /EdgeDetect_Top/EdgeDetect_VerDer/run/line_buf0:rsc -MAP_TO_MODULE ccs_sample_mem.ccs_ram_sync_singleport
+# /EdgeDetect_Top/EdgeDetect_VerDer/run/line_buf0:rsc/MAP_TO_MODULE ccs_sample_mem.ccs_ram_sync_singleport
+# > directive set /EdgeDetect_Top/EdgeDetect_VerDer/run/line_buf0:rsc -GEN_EXTERNAL_ENABLE true
+# /EdgeDetect_Top/EdgeDetect_VerDer/run/line_buf0:rsc/GEN_EXTERNAL_ENABLE true
+# > directive set /EdgeDetect_Top/EdgeDetect_VerDer/run/line_buf0:rsc -EXTERNAL_MEMORY true
+# /EdgeDetect_Top/EdgeDetect_VerDer/run/line_buf0:rsc/EXTERNAL_MEMORY true
+# > directive set /EdgeDetect_Top/EdgeDetect_VerDer/run/line_buf1:rsc -MAP_TO_MODULE ccs_sample_mem.ccs_ram_sync_singleport
+# /EdgeDetect_Top/EdgeDetect_VerDer/run/line_buf1:rsc/MAP_TO_MODULE ccs_sample_mem.ccs_ram_sync_singleport
+# > directive set /EdgeDetect_Top/EdgeDetect_VerDer/run/line_buf1:rsc -EXTERNAL_MEMORY true
+# /EdgeDetect_Top/EdgeDetect_VerDer/run/line_buf1:rsc/EXTERNAL_MEMORY true
+# > directive set /EdgeDetect_Top/EdgeDetect_VerDer/run/line_buf1:rsc -GEN_EXTERNAL_ENABLE true
+# /EdgeDetect_Top/EdgeDetect_VerDer/run/line_buf1:rsc/GEN_EXTERNAL_ENABLE true
+# > directive set /EdgeDetect_Top/EdgeDetect_HorDer/dat_in:rsc -MAP_TO_MODULE ccs_ioport.ccs_in_wait_coupled
+# /EdgeDetect_Top/EdgeDetect_HorDer/dat_in:rsc/MAP_TO_MODULE ccs_ioport.ccs_in_wait_coupled
+# > directive set /EdgeDetect_Top/EdgeDetect_MagAng/dx_in:rsc -MAP_TO_MODULE ccs_ioport.ccs_in_wait_coupled
+# /EdgeDetect_Top/EdgeDetect_MagAng/dx_in:rsc/MAP_TO_MODULE ccs_ioport.ccs_in_wait_coupled
+# > directive set /EdgeDetect_Top/EdgeDetect_MagAng/dy_in:rsc -MAP_TO_MODULE ccs_ioport.ccs_in_wait_coupled
+# /EdgeDetect_Top/EdgeDetect_MagAng/dy_in:rsc/MAP_TO_MODULE ccs_ioport.ccs_in_wait_coupled
+# > go architect
+# Info: Starting transformation 'loops' on solution 'EdgeDetect_Top.v1' (SOL-8)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(88): Loop '/EdgeDetect_Top/EdgeDetect_MagAng/run/MCOL:for' is being fully unrolled (4 times). (LOOP-7)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(143): Loop '/EdgeDetect_Top/EdgeDetect_MagAng/run/EdgeDetect_MagAng::calc_crc32<32>:for:for' is being fully unrolled (31 times). (LOOP-7)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(143): Loop '/EdgeDetect_Top/EdgeDetect_MagAng/run/EdgeDetect_MagAng::calc_crc32<32>#1:for:for' is being fully unrolled (31 times). (LOOP-7)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(136): Loop '/EdgeDetect_Top/EdgeDetect_MagAng/run/EdgeDetect_MagAng::calc_crc32<32>:for' is being fully unrolled (32 times). (LOOP-7)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(136): Loop '/EdgeDetect_Top/EdgeDetect_MagAng/run/EdgeDetect_MagAng::calc_crc32<32>#1:for' is being fully unrolled (32 times). (LOOP-7)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(78): Loop '/EdgeDetect_Top/EdgeDetect_MagAng/run/MCOL' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(76): Loop '/EdgeDetect_Top/EdgeDetect_MagAng/run/MROW' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(45): Loop '/EdgeDetect_Top/EdgeDetect_MagAng/run/main' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(72): Loop '/EdgeDetect_Top/EdgeDetect_HorDer/run/HCOL:if#1:for' is being fully unrolled (4 times). (LOOP-7)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(75): Loop '/EdgeDetect_Top/EdgeDetect_HorDer/run/HCOL:if#1:for#1' is being fully unrolled (4 times). (LOOP-7)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(82): Loop '/EdgeDetect_Top/EdgeDetect_HorDer/run/HCOL:else#1:if:for' is being fully unrolled (5 times). (LOOP-7)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(89): Loop '/EdgeDetect_Top/EdgeDetect_HorDer/run/HCOL:else#1:else:for' is being fully unrolled (5 times). (LOOP-7)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(93): Loop '/EdgeDetect_Top/EdgeDetect_HorDer/run/HCOL:else#1:else:for#1' is being fully unrolled (4 times). (LOOP-7)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(99): Loop '/EdgeDetect_Top/EdgeDetect_HorDer/run/HCOL:for' is being fully unrolled (4 times). (LOOP-7)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(108): Loop '/EdgeDetect_Top/EdgeDetect_HorDer/run/HCOL:if#2:for' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(62): Loop '/EdgeDetect_Top/EdgeDetect_HorDer/run/HCOL' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(60): Loop '/EdgeDetect_Top/EdgeDetect_HorDer/run/HROW' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(44): Loop '/EdgeDetect_Top/EdgeDetect_HorDer/run/main' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_VerDer.h(104): Loop '/EdgeDetect_Top/EdgeDetect_VerDer/run/VCOL:for' is being fully unrolled (4 times). (LOOP-7)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_VerDer.h(67): Loop '/EdgeDetect_Top/EdgeDetect_VerDer/run/VCOL' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_VerDer.h(65): Loop '/EdgeDetect_Top/EdgeDetect_VerDer/run/VROW' is left rolled. (LOOP-4)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_VerDer.h(47): Loop '/EdgeDetect_Top/EdgeDetect_VerDer/run/main' is left rolled. (LOOP-4)
+# Info: Completed transformation 'loops' on solution 'EdgeDetect_Top.v1': elapsed time 2.36 seconds, memory usage 1682136kB, peak memory usage 1682136kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 692, Real ops = 259, Vars = 287 (SOL-21)
+# Info: Starting transformation 'memories' on solution 'EdgeDetect_Top.v1' (SOL-8)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_VerDer.h(55): Memory Resource '/EdgeDetect_Top/EdgeDetect_VerDer/run/line_buf0:rsc' (from var: line_buf0) mapped to 'ccs_sample_mem.ccs_ram_sync_singleport' (size: 80 x 64). (MEM-4)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_VerDer.h(56): Memory Resource '/EdgeDetect_Top/EdgeDetect_VerDer/run/line_buf1:rsc' (from var: line_buf1) mapped to 'ccs_sample_mem.ccs_ram_sync_singleport' (size: 80 x 64). (MEM-4)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(51): I/O-Port Resource '/EdgeDetect_Top/EdgeDetect_MagAng/crc32_pix_in:rsc' (from var: crc32_pix_in) mapped to 'ccs_ioport.ccs_out' (size: 32). (MEM-2)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect.h(66): I/O-Port Resource '/EdgeDetect_Top/crc32_hw_pix_in:rsc' (from var: crc32_hw_pix_in) mapped to 'ccs_ioport.ccs_out' (size: 32). (MEM-2)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(52): I/O-Port Resource '/EdgeDetect_Top/EdgeDetect_MagAng/crc32_dat_out:rsc' (from var: crc32_dat_out) mapped to 'ccs_ioport.ccs_out' (size: 32). (MEM-2)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect.h(67): I/O-Port Resource '/EdgeDetect_Top/crc32_hw_pix_out:rsc' (from var: crc32_hw_pix_out) mapped to 'ccs_ioport.ccs_out' (size: 32). (MEM-2)
+# Info: Completed transformation 'memories' on solution 'EdgeDetect_Top.v1': elapsed time 1.29 seconds, memory usage 1682136kB, peak memory usage 1682136kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 660, Real ops = 259, Vars = 294 (SOL-21)
+# Info: Starting transformation 'cluster' on solution 'EdgeDetect_Top.v1' (SOL-8)
+# Info: Completed transformation 'cluster' on solution 'EdgeDetect_Top.v1': elapsed time 0.11 seconds, memory usage 1682136kB, peak memory usage 1682136kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 660, Real ops = 259, Vars = 294 (SOL-21)
+# Info: Starting transformation 'architect' on solution 'EdgeDetect_Top.v1' (SOL-8)
+# Design 'EdgeDetect_Top' contains '362' real operations. (SOL-11)
+# Warning: Extrapolation detected. Script '/home/course/u110020015/asoc_lab2/catapult-for-soc-course/lab2_edgedetec_fsic/02_edgedetect_fsic/catapult_work/Catapult/EdgeDetect_Top.v1/adjust_char_library.tcl' generated. (LIB-142)
+# Info: Completed transformation 'architect' on solution 'EdgeDetect_Top.v1': elapsed time 1.18 seconds, memory usage 1682136kB, peak memory usage 1682136kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 1057, Real ops = 362, Vars = 364 (SOL-21)
+# > go extract
+# Info: Starting transformation 'allocate' on solution 'EdgeDetect_Top.v1' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/EdgeDetect_Top/EdgeDetect_MagAng/run' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(76): Prescheduled LOOP '/EdgeDetect_Top/EdgeDetect_MagAng/run/MROW' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(45): Prescheduled LOOP '/EdgeDetect_Top/EdgeDetect_MagAng/run/main' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(45): Prescheduled LOOP '/EdgeDetect_Top/EdgeDetect_MagAng/run/run:rlp' (0 c-steps) (SCHD-7)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(45): Prescheduled SEQUENTIAL '/EdgeDetect_Top/EdgeDetect_MagAng/run' (total length 4 c-steps) (SCHD-8)
+# Info: $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(45): Initial schedule of SEQUENTIAL '/EdgeDetect_Top/EdgeDetect_MagAng/run': Latency = 3, Area (Datapath, Register, Total) = 1512.39, 588.92, 2101.31 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Input operation 'MCOL:asn' moved from c-step 0 to c-step 1 to save registers (SCHD-49)
+# Info: $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(45): Final schedule of SEQUENTIAL '/EdgeDetect_Top/EdgeDetect_MagAng/run': Latency = 2, Area (Datapath, Register, Total) = 806.06, 588.92, 1394.98 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Performing concurrent resource allocation and scheduling on '/EdgeDetect_Top/EdgeDetect_HorDer/run' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(60): Prescheduled LOOP '/EdgeDetect_Top/EdgeDetect_HorDer/run/HROW' (3 c-steps) (SCHD-7)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(44): Prescheduled LOOP '/EdgeDetect_Top/EdgeDetect_HorDer/run/main' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(44): Prescheduled LOOP '/EdgeDetect_Top/EdgeDetect_HorDer/run/run:rlp' (0 c-steps) (SCHD-7)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(44): Prescheduled SEQUENTIAL '/EdgeDetect_Top/EdgeDetect_HorDer/run' (total length 5 c-steps) (SCHD-8)
+# Info: $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(44): Initial schedule of SEQUENTIAL '/EdgeDetect_Top/EdgeDetect_HorDer/run': Latency = 2, Area (Datapath, Register, Total) = 1974.78, 2212.06, 4186.84 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Input operation 'operator_<10,false>#2:asn' moved from c-step 1 to c-step 2 to save registers (SCHD-49)
+# Input operation 'operator_<10,false>#3:asn' moved from c-step 1 to c-step 2 to save registers (SCHD-49)
+# Info: $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(44): Final schedule of SEQUENTIAL '/EdgeDetect_Top/EdgeDetect_HorDer/run': Latency = 2, Area (Datapath, Register, Total) = 980.20, 2176.15, 3156.35 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Performing concurrent resource allocation and scheduling on '/EdgeDetect_Top/EdgeDetect_VerDer/run' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_VerDer.h(65): Prescheduled LOOP '/EdgeDetect_Top/EdgeDetect_VerDer/run/VROW' (4 c-steps) (SCHD-7)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_VerDer.h(47): Prescheduled LOOP '/EdgeDetect_Top/EdgeDetect_VerDer/run/main' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_VerDer.h(47): Prescheduled LOOP '/EdgeDetect_Top/EdgeDetect_VerDer/run/run:rlp' (0 c-steps) (SCHD-7)
+# $PROJECT_HOME/../hls_c/inc/EdgeDetect_VerDer.h(47): Prescheduled SEQUENTIAL '/EdgeDetect_Top/EdgeDetect_VerDer/run' (total length 6 c-steps) (SCHD-8)
+# Info: $PROJECT_HOME/../hls_c/inc/EdgeDetect_VerDer.h(47): Initial schedule of SEQUENTIAL '/EdgeDetect_Top/EdgeDetect_VerDer/run': Latency = 4, Area (Datapath, Register, Total) = 2296.84, 1565.68, 3862.52 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Input operation 'operator_<10,false>#5:asn' moved from c-step 1 to c-step 2 to save registers (SCHD-49)
+# Info: $PROJECT_HOME/../hls_c/inc/EdgeDetect_VerDer.h(47): Final schedule of SEQUENTIAL '/EdgeDetect_Top/EdgeDetect_VerDer/run': Latency = 3, Area (Datapath, Register, Total) = 955.09, 1565.68, 2520.77 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Info: Applying user-supplied FIFO_DEPTH constraint of 2 to channel 'dy' (HIER-22)
+# Info: Applying user-supplied FIFO_DEPTH constraint of 0 to channel 'dx' overriding computed fifo_depth of 1 (HIER-35)
+# Info: Applying user-supplied FIFO_DEPTH constraint of 0 to channel 'dat_in_hor' overriding computed fifo_depth of 2 (HIER-35)
+# Info: Applying user-supplied FIFO_DEPTH constraint of 0 to channel 'dat_in_mag' overriding computed fifo_depth of 1 (HIER-35)
+# Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'allocate' on solution 'EdgeDetect_Top.v1': elapsed time 1.23 seconds, memory usage 1682136kB, peak memory usage 1682136kB (SOL-9)
+# Info: Design complexity at end of 'allocate': Total ops = 1057, Real ops = 362, Vars = 364 (SOL-21)
+# Info: Starting transformation 'schedule' on solution 'EdgeDetect_Top.v1' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/EdgeDetect_Top/EdgeDetect_MagAng/run' (CRAAS-1)
+# Performing concurrent resource allocation and scheduling on '/EdgeDetect_Top/EdgeDetect_HorDer/run' (CRAAS-1)
+# Performing concurrent resource allocation and scheduling on '/EdgeDetect_Top/EdgeDetect_VerDer/run' (CRAAS-1)
+# Global signal 'din_chn:rsc.rdy' added to design 'EdgeDetect_VerDer' for component 'din_chn:rsci' (LIB-3)
+# Global signal 'din_chn:rsc.vld' added to design 'EdgeDetect_VerDer' for component 'din_chn:rsci' (LIB-3)
+# Global signal 'din_chn:rsc.dat' added to design 'EdgeDetect_VerDer' for component 'din_chn:rsci' (LIB-3)
+# Info: $PROJECT_HOME/../hls_c/inc/EdgeDetect_VerDer.h(70): Creating buffer for wait controller for component 'din_chn:rsc' (SCHD-46)
+# Global signal 'dat_in_hor:rsc.rdy' added to design 'EdgeDetect_VerDer' for component 'dat_in_hor:rsci' (LIB-3)
+# Global signal 'dat_in_hor:rsc.vld' added to design 'EdgeDetect_VerDer' for component 'dat_in_hor:rsci' (LIB-3)
+# Global signal 'dat_in_hor:rsc.dat' added to design 'EdgeDetect_VerDer' for component 'dat_in_hor:rsci' (LIB-3)
+# Global signal 'dy:rsc.rdy' added to design 'EdgeDetect_VerDer' for component 'dy:rsci' (LIB-3)
+# Global signal 'dy:rsc.vld' added to design 'EdgeDetect_VerDer' for component 'dy:rsci' (LIB-3)
+# Global signal 'dy:rsc.dat' added to design 'EdgeDetect_VerDer' for component 'dy:rsci' (LIB-3)
+# Global signal 'line_buf0:rsc.en' added to design 'EdgeDetect_VerDer' for component 'line_buf0:rsci' (LIB-3)
+# Global signal 'line_buf0:rsc.q' added to design 'EdgeDetect_VerDer' for component 'line_buf0:rsci' (LIB-3)
+# Global signal 'line_buf0:rsc.we' added to design 'EdgeDetect_VerDer' for component 'line_buf0:rsci' (LIB-3)
+# Global signal 'line_buf0:rsc.d' added to design 'EdgeDetect_VerDer' for component 'line_buf0:rsci' (LIB-3)
+# Global signal 'line_buf0:rsc.adr' added to design 'EdgeDetect_VerDer' for component 'line_buf0:rsci' (LIB-3)
+# Global signal 'line_buf1:rsc.en' added to design 'EdgeDetect_VerDer' for component 'line_buf1:rsci' (LIB-3)
+# Global signal 'line_buf1:rsc.q' added to design 'EdgeDetect_VerDer' for component 'line_buf1:rsci' (LIB-3)
+# Global signal 'line_buf1:rsc.we' added to design 'EdgeDetect_VerDer' for component 'line_buf1:rsci' (LIB-3)
+# Global signal 'line_buf1:rsc.d' added to design 'EdgeDetect_VerDer' for component 'line_buf1:rsci' (LIB-3)
+# Global signal 'line_buf1:rsc.adr' added to design 'EdgeDetect_VerDer' for component 'line_buf1:rsci' (LIB-3)
+# Global signal 'dat_in:rsc.rdy' added to design 'EdgeDetect_HorDer' for component 'dat_in:rsci' (LIB-3)
+# Global signal 'dat_in:rsc.vld' added to design 'EdgeDetect_HorDer' for component 'dat_in:rsci' (LIB-3)
+# Global signal 'dat_in:rsc.dat' added to design 'EdgeDetect_HorDer' for component 'dat_in:rsci' (LIB-3)
+# Info: $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(67): Creating buffer for wait controller for component 'dat_in:rsc' (SCHD-46)
+# Global signal 'dx:rsc.rdy' added to design 'EdgeDetect_HorDer' for component 'dx:rsci' (LIB-3)
+# Global signal 'dx:rsc.vld' added to design 'EdgeDetect_HorDer' for component 'dx:rsci' (LIB-3)
+# Global signal 'dx:rsc.dat' added to design 'EdgeDetect_HorDer' for component 'dx:rsci' (LIB-3)
+# Global signal 'dat_out:rsc.rdy' added to design 'EdgeDetect_HorDer' for component 'dat_out:rsci' (LIB-3)
+# Global signal 'dat_out:rsc.vld' added to design 'EdgeDetect_HorDer' for component 'dat_out:rsci' (LIB-3)
+# Global signal 'dat_out:rsc.dat' added to design 'EdgeDetect_HorDer' for component 'dat_out:rsci' (LIB-3)
+# Global signal 'dx_in:rsc.rdy' added to design 'EdgeDetect_MagAng' for component 'dx_in:rsci' (LIB-3)
+# Global signal 'dx_in:rsc.vld' added to design 'EdgeDetect_MagAng' for component 'dx_in:rsci' (LIB-3)
+# Global signal 'dx_in:rsc.dat' added to design 'EdgeDetect_MagAng' for component 'dx_in:rsci' (LIB-3)
+# Info: $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(81): Creating buffer for wait controller for component 'dx_in:rsc' (SCHD-46)
+# Global signal 'dy_in:rsc.rdy' added to design 'EdgeDetect_MagAng' for component 'dy_in:rsci' (LIB-3)
+# Global signal 'dy_in:rsc.vld' added to design 'EdgeDetect_MagAng' for component 'dy_in:rsci' (LIB-3)
+# Global signal 'dy_in:rsc.dat' added to design 'EdgeDetect_MagAng' for component 'dy_in:rsci' (LIB-3)
+# Info: $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(82): Creating buffer for wait controller for component 'dy_in:rsc' (SCHD-46)
+# Global signal 'pix_in:rsc.rdy' added to design 'EdgeDetect_MagAng' for component 'pix_in:rsci' (LIB-3)
+# Global signal 'pix_in:rsc.vld' added to design 'EdgeDetect_MagAng' for component 'pix_in:rsci' (LIB-3)
+# Global signal 'pix_in:rsc.dat' added to design 'EdgeDetect_MagAng' for component 'pix_in:rsci' (LIB-3)
+# Info: $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(83): Creating buffer for wait controller for component 'pix_in:rsc' (SCHD-46)
+# Global signal 'crc32_pix_in:rsc.dat' added to design 'EdgeDetect_MagAng' for component 'crc32_pix_in:rsci' (LIB-3)
+# Global signal 'crc32_dat_out:rsc.dat' added to design 'EdgeDetect_MagAng' for component 'crc32_dat_out:rsci' (LIB-3)
+# Global signal 'dat_out:rsc.rdy' added to design 'EdgeDetect_MagAng' for component 'dat_out:rsci' (LIB-3)
+# Global signal 'dat_out:rsc.vld' added to design 'EdgeDetect_MagAng' for component 'dat_out:rsci' (LIB-3)
+# Global signal 'dat_out:rsc.dat' added to design 'EdgeDetect_MagAng' for component 'dat_out:rsci' (LIB-3)
+# Global signal 'crc32_pix_in.triosy.lz' added to design 'EdgeDetect_MagAng' for component 'crc32_pix_in.triosy:obj' (LIB-3)
+# Global signal 'crc32_dat_out.triosy.lz' added to design 'EdgeDetect_MagAng' for component 'crc32_dat_out.triosy:obj' (LIB-3)
+# Info: $PROJECT_HOME/../hls_c/inc/EdgeDetect_MagAng.h(76): Loop '/EdgeDetect_Top/EdgeDetect_MagAng/run/MROW' is pipelined with initiation interval 1 and no flushing (SCHD-43)
+# Info: $PROJECT_HOME/../hls_c/inc/EdgeDetect_HorDer.h(60): Loop '/EdgeDetect_Top/EdgeDetect_HorDer/run/HROW' is pipelined with initiation interval 1 and no flushing (SCHD-43)
+# Info: $PROJECT_HOME/../hls_c/inc/EdgeDetect_VerDer.h(65): Loop '/EdgeDetect_Top/EdgeDetect_VerDer/run/VROW' is pipelined with initiation interval 1 and no flushing (SCHD-43)
+# Report written to file 'cycle.rpt'
+# Info: Completed transformation 'schedule' on solution 'EdgeDetect_Top.v1': elapsed time 9.19 seconds, memory usage 1682136kB, peak memory usage 1682136kB (SOL-9)
+# Info: Design complexity at end of 'schedule': Total ops = 2147, Real ops = 452, Vars = 980 (SOL-21)
+# Info: Starting transformation 'dpfsm' on solution 'EdgeDetect_Top.v1' (SOL-8)
+# Performing FSM extraction... (FSM-1)
+# Creating shared register 'HCOL:if#2:p_tmp.lpi#2(15:8)' for variables 'HCOL:if#2:p_tmp.lpi#2(15:8), HCOL:if#2:p_tmp.lpi#2.dfm#1(15:8), HCOL:if#2:p_tmp.lpi#2.dfm#1.1(7:0)' (2 registers deleted). (FSM-3)
+# Creating shared register 'HCOL:if#2:p_tmp.lpi#2(23:16)' for variables 'HCOL:if#2:p_tmp.lpi#2(23:16), HCOL:if#2:p_tmp.lpi#2.dfm#1(23:16), p(1).lpi#2.dfm#1.1' (2 registers deleted). (FSM-3)
+# Creating shared register 'HCOL:if#2:p_tmp.lpi#2(31:24)' for variables 'HCOL:if#2:p_tmp.lpi#2(31:24), HCOL:if#2:p_tmp.lpi#2.dfm#1(31:24), p(2).lpi#2.dfm#1.1' (2 registers deleted). (FSM-3)
+# Info: Completed transformation 'dpfsm' on solution 'EdgeDetect_Top.v1': elapsed time 3.72 seconds, memory usage 1682136kB, peak memory usage 1682136kB (SOL-9)
+# Info: Design complexity at end of 'dpfsm': Total ops = 2621, Real ops = 1193, Vars = 1062 (SOL-21)
+# Info: Starting transformation 'instance' on solution 'EdgeDetect_Top.v1' (SOL-8)
+# Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Completed transformation 'instance' on solution 'EdgeDetect_Top.v1': elapsed time 5.44 seconds, memory usage 1682136kB, peak memory usage 1682136kB (SOL-9)
+# Info: Design complexity at end of 'instance': Total ops = 2593, Real ops = 1227, Vars = 2506 (SOL-21)
+# Info: Starting transformation 'extract' on solution 'EdgeDetect_Top.v1' (SOL-8)
+# Report written to file 'EdgeDetect_Top.rpt'
+# Generating scverify_top.cpp
+# Generating SCVerify ccs_wrapper_EdgeDetect_Top.v
+# Netlist written to file 'EdgeDetect_Top.v' (NET-4)
+# generate concat
+# order file name is: EdgeDetect_Top.v_order.txt
+# Add dependent file: /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/ccs_in_wait_coupled_v1.v
+# Add dependent file: /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v
+# Add dependent file: /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v
+# Add dependent file: /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Add dependent file: /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/ccs_out_v1.v
+# Add dependent file: /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/ccs_genreg_v1.v
+# Add dependent file: /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/ccs_fifo_wait_core_v5.v
+# Add dependent file: /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/ccs_pipe_v6.v
+# Add dependent file: ./EdgeDetect_Top.v
+# Finished writing concatenated file: /home/course/u110020015/asoc_lab2/catapult-for-soc-course/lab2_edgedetec_fsic/02_edgedetect_fsic/catapult_work/Catapult/EdgeDetect_Top.v1/concat_EdgeDetect_Top.v
+# order file name is: EdgeDetect_Top.v_order_sim.txt
+# Add dependent file: /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/ccs_in_wait_coupled_v1.v
+# Add dependent file: /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v
+# Add dependent file: /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v
+# Add dependent file: /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Add dependent file: /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/ccs_out_v1.v
+# Add dependent file: /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/ccs_genreg_v1.v
+# Add dependent file: /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/ccs_fifo_wait_core_v5.v
+# Add dependent file: /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/ccs_pipe_v6.v
+# Add dependent file: ./EdgeDetect_Top.v
+# Finished writing concatenated simulation file: /home/course/u110020015/asoc_lab2/catapult-for-soc-course/lab2_edgedetec_fsic/02_edgedetect_fsic/catapult_work/Catapult/EdgeDetect_Top.v1/concat_sim_EdgeDetect_Top.v
+# Generating SCVerify testbench files
+# Makefile for RTL Verilog output 'EdgeDetect_Top.v' vs Untimed C++ written to file './scverify/Verify_EdgeDetect_Top_v_msim.mk'
+# Makefile for Concat RTL Verilog output 'concat_sim_EdgeDetect_Top.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_EdgeDetect_Top_v_msim.mk'
+# Info: Completed transformation 'extract' on solution 'EdgeDetect_Top.v1': elapsed time 9.57 seconds, memory usage 1682136kB, peak memory usage 1682136kB (SOL-9)
+# Info: Design complexity at end of 'extract': Total ops = 2594, Real ops = 1230, Vars = 1060 (SOL-21)
+# > end dofile ./directives.tcl
+flow run /SCVerify/launch_make ./scverify/Verify_orig_cxx_osci.mk {} SIMTOOL=osci sim
+# Making './scverify/Verify_orig_cxx_osci.mk {} SIMTOOL=osci sim'
+# Make utility invoked from '/home/course/u110020015/asoc_lab2/catapult-for-soc-course/lab2_edgedetec_fsic/02_edgedetect_fsic/catapult_work/Catapult/EdgeDetect_Top.v1'
+#     /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/bin/make -f ./scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci build < "/dev/null" (BASIC-15)
+# ============================================
+# Creating simulation directory 'scverify/orig_cxx_osci'
+# mkdir -p scverify/orig_cxx_osci
+# ============================================
+# Compiling C++ file: ../../../hls_c/src/EdgeDetect_tb.cpp
+# /usr/cadtool/mentor/Catapult/2023.1/Mgc_home/bin/g++ -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_SYSC  -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DCCS_MISMATCHED_OUTPUTS_ONLY -DDEADLOCK_DETECTION -std=gnu++11 -Wall -Wno-unknown-pragmas -Wno-unused-label -g -I. -I../../../bmpUtil/inc -I../../../cmodel/inc -I../../../hls_c/inc -I../.. -I. -I../../../bmpUtil/inc -I../../../cmodel/inc -I../../../hls_c/inc -I/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/shared/include -I/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/shared/include -I/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/hls_pkgs/src -I/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs -I/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DSC_USE_STD_STRING  -c ../../../hls_c/src/EdgeDetect_tb.cpp -o scverify/orig_cxx_osci/EdgeDetect_tb.cpp.cxxts.o
+# ../../../hls_c/src/EdgeDetect_tb.cpp: In function ‘int main(int, char**)’:
+# ../../../hls_c/src/EdgeDetect_tb.cpp:116:11: warning: unused variable ‘sumAngErr’ [-Wunused-variable]
+#   116 |     float sumAngErr = 0;
+#       |           ^~~~~~~~~
+# ============================================
+# Compiling C++ file: ../../../bmpUtil/src/bmp_io.cpp
+# /usr/cadtool/mentor/Catapult/2023.1/Mgc_home/bin/g++ -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_SYSC  -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DCCS_MISMATCHED_OUTPUTS_ONLY -DDEADLOCK_DETECTION -std=gnu++11 -Wall -Wno-unknown-pragmas -Wno-unused-label -g -I. -I../../../bmpUtil/inc -I../../../cmodel/inc -I../../../hls_c/inc -I../.. -I. -I../../../bmpUtil/inc -I../../../cmodel/inc -I../../../hls_c/inc -I/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/shared/include -I/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/shared/include -I/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/hls_pkgs/src -I/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs -I/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DSC_USE_STD_STRING  -c ../../../bmpUtil/src/bmp_io.cpp -o scverify/orig_cxx_osci/bmp_io.cpp.cxxts.o
+# ../../../bmpUtil/src/bmp_io.cpp: In function ‘bool bmp_print_test(char*)’:
+# ../../../bmpUtil/src/bmp_io.cpp:1650:13: warning: ‘garray’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+#  1650 |     *garray = *rarray;
+#       |     ~~~~~~~~^~~~~~~~~
+# ../../../bmpUtil/src/bmp_io.cpp:1651:13: warning: ‘barray’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+#  1651 |     *barray = *rarray;
+#       |     ~~~~~~~~^~~~~~~~~
+# ============================================
+# Linking executable
+# /usr/cadtool/mentor/Catapult/2023.1/Mgc_home/bin/g++  -static-libstdc++ -L/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/shared/lib/Linux/gcc-10.3.0-64 -L/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/shared/lib -L/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/shared/lib/Linux/gcc-10.3.0-64 scverify/orig_cxx_osci/EdgeDetect_tb.cpp.cxxts.o scverify/orig_cxx_osci/bmp_io.cpp.cxxts.o -Wl,-Bstatic -lsystemc -Wl,-Bdynamic -lpthread -o scverify/orig_cxx_osci/scverify_top
+#     /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/bin/make -f ./scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci sim (BASIC-14)
+# ============================================
+# Simulating design
+# cd ../..; ./Catapult/EdgeDetect_Top.v1/scverify/orig_cxx_osci/scverify_top ./image/people640x360_rgb.bmp 1 out_algorithm.bmp out_hw.bmp
+# Loading Input File
+# Input file:          ./image/people640x360_rgb.bmp
+# Mode:                1
+# Output file (alg):   out_algorithm.bmp
+# Output file (hw):    out_hw.bmp
+# Image width: 640
+# Image height: 360
+# ############################################ FRAME NO.   0 ###############################################
+# Running
+# Magnitude: Manhattan norm per pixel 5.357491
+# Writing algorithmic bitmap output to: out_algorithm.bmp
+# Writing bit-accurate bitmap output to: out_hw.bmp
+# sofErr: 0 eolErr: 0
+# crc32_alg_pix_in  = ebb44e76  crc32_hw_pix_in  = ebb44e76
+# crc32_alg_dat_out = 398625ad  crc32_hw_dat_out = 49e564fe
+# Finished

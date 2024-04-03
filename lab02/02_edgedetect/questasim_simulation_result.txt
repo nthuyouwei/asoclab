@@ -1,0 +1,218 @@
+# //  Questa Sim-64
+# //  Version 2021.1_1 linux_x86_64 Feb 21 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim -i -t ps -wlf ./Catapult/EdgeDetect_Top.v1/scverify/EdgeDetect_Top_v_msim/vsim.wlf -l ./Catapult/EdgeDetect_Top.v1/scverify/EdgeDetect_Top_v_msim/sim.log -L ./Catapult/EdgeDetect_Top.v1/scverify/EdgeDetect_Top_v_msim/mgc_hls -L ./Catapult/EdgeDetect_Top.v1/scverify/EdgeDetect_Top_v_msim/work scverify_top_opt -sc_arg "./image/people640x360_rgb.bmp" -sc_arg "1" -sc_arg "out_algorithm.bmp" -sc_arg "out_hw.bmp" -do "do {./Catapult/EdgeDetect_Top.v1/scverify/EdgeDetect_Top_v_msim/scverify_msim_wave.tcl}" 
+# Start time: 17:32:41 on Apr 03,2024
+# Loading /home/course/u110020015/asoc_lab2/catapult-for-soc-course/lab2_edgedetec_fsic/02_edgedetect_fsic/catapult_work/Catapult/EdgeDetect_Top.v1/scverify/EdgeDetect_Top_v_msim/work/_sc/linux_x86_64_gcc-7.4.0/systemc.so
+# Loading /home/course/u110020015/asoc_lab2/catapult-for-soc-course/lab2_edgedetec_fsic/02_edgedetect_fsic/catapult_work/Catapult/EdgeDetect_Top.v1/scverify/EdgeDetect_Top_v_msim/work.scverify_top
+# Info: CCS_CLK_CTOR: Clock 'clk' - Using default clock period '10 ns'
+# Loading work.ccs_wrapper(fast)
+# ** Note: (vsim-17423) SystemC IEEE 1666 deprecated warnings are suppressed by default. Enable the 'ScShowIeeeDeprecationWarnings' modelsim.ini variable to get more information about the suppressed warnings.
+# Loading work.EdgeDetect_Top(fast)
+# Loading work.EdgeDetect_Top_struct(fast)
+# Loading ./Catapult/EdgeDetect_Top.v1/scverify/EdgeDetect_Top_v_msim/mgc_hls.ccs_pipe_v6(fast)
+# Loading ./Catapult/EdgeDetect_Top.v1/scverify/EdgeDetect_Top_v_msim/mgc_hls.ccs_fifo_wait_core_v5(fast)
+# Loading ./Catapult/EdgeDetect_Top.v1/scverify/EdgeDetect_Top_v_msim/mgc_hls.ccs_genreg_v1(fast)
+# Loading ./Catapult/EdgeDetect_Top.v1/scverify/EdgeDetect_Top_v_msim/mgc_hls.ccs_genreg_v1(fast__1)
+# Loading ./Catapult/EdgeDetect_Top.v1/scverify/EdgeDetect_Top_v_msim/mgc_hls.ccs_genreg_v1(fast__2)
+# Loading work.EdgeDetect_VerDer(fast)
+# Loading work.EdgeDetect_VerDer_ccs_sample_mem_ccs_ram_sync_singleport_rwport_en_6_64_7_80_80_64_5_gen(fast)
+# Loading work.EdgeDetect_VerDer_ccs_sample_mem_ccs_ram_sync_singleport_rwport_en_7_64_7_80_80_64_5_gen(fast)
+# Loading work.EdgeDetect_VerDer_run(fast)
+# Loading work.EdgeDetect_VerDer_run_din_chn_rsci(fast)
+# Loading ./Catapult/EdgeDetect_Top.v1/scverify/EdgeDetect_Top_v_msim/mgc_hls.ccs_in_wait_v1(fast)
+# Loading work.EdgeDetect_VerDer_run_din_chn_rsci_din_chn_wait_ctrl(fast)
+# Loading work.EdgeDetect_VerDer_run_din_chn_rsci_din_chn_wait_dp(fast)
+# Loading work.EdgeDetect_VerDer_run_dat_in_hor_rsci(fast)
+# Loading ./Catapult/EdgeDetect_Top.v1/scverify/EdgeDetect_Top_v_msim/mgc_hls.ccs_out_wait_v1(fast)
+# Loading work.EdgeDetect_VerDer_run_dat_in_hor_rsci_dat_in_hor_wait_ctrl(fast)
+# Loading work.EdgeDetect_VerDer_run_dat_in_hor_rsci_dat_in_hor_wait_dp(fast)
+# Loading work.EdgeDetect_VerDer_run_dy_rsci(fast)
+# Loading ./Catapult/EdgeDetect_Top.v1/scverify/EdgeDetect_Top_v_msim/mgc_hls.ccs_out_wait_v1(fast__1)
+# Loading work.EdgeDetect_VerDer_run_dy_rsci_dy_wait_ctrl(fast)
+# Loading work.EdgeDetect_VerDer_run_dy_rsci_dy_wait_dp(fast)
+# Loading work.EdgeDetect_VerDer_run_wait_dp(fast)
+# Loading work.EdgeDetect_VerDer_run_staller(fast)
+# Loading work.EdgeDetect_VerDer_run_run_fsm(fast)
+# Loading work.EdgeDetect_HorDer(fast)
+# Loading work.EdgeDetect_HorDer_run(fast)
+# Loading work.EdgeDetect_HorDer_run_dat_in_rsci(fast)
+# Loading ./Catapult/EdgeDetect_Top.v1/scverify/EdgeDetect_Top_v_msim/mgc_hls.ccs_in_wait_coupled_v1(fast)
+# Loading work.EdgeDetect_HorDer_run_dat_in_rsci_dat_in_wait_ctrl(fast)
+# Loading work.EdgeDetect_HorDer_run_dx_rsci(fast)
+# Loading ./Catapult/EdgeDetect_Top.v1/scverify/EdgeDetect_Top_v_msim/mgc_hls.ccs_out_wait_v1(fast__2)
+# Loading work.EdgeDetect_HorDer_run_dx_rsci_dx_wait_ctrl(fast)
+# Loading work.EdgeDetect_HorDer_run_dx_rsci_dx_wait_dp(fast)
+# Loading work.EdgeDetect_HorDer_run_dat_out_rsci(fast)
+# Loading ./Catapult/EdgeDetect_Top.v1/scverify/EdgeDetect_Top_v_msim/mgc_hls.ccs_out_wait_v1(fast__3)
+# Loading work.EdgeDetect_HorDer_run_dat_out_rsci_dat_out_wait_ctrl(fast)
+# Loading work.EdgeDetect_HorDer_run_dat_out_rsci_dat_out_wait_dp(fast)
+# Loading work.EdgeDetect_HorDer_run_staller(fast)
+# Loading work.EdgeDetect_HorDer_run_run_fsm(fast)
+# Loading work.EdgeDetect_MagAng(fast)
+# Loading ./Catapult/EdgeDetect_Top.v1/scverify/EdgeDetect_Top_v_msim/mgc_hls.ccs_out_v1(fast)
+# Loading ./Catapult/EdgeDetect_Top.v1/scverify/EdgeDetect_Top_v_msim/mgc_hls.ccs_out_v1(fast__1)
+# Loading work.EdgeDetect_MagAng_run(fast)
+# Loading work.EdgeDetect_MagAng_run_dx_in_rsci(fast)
+# Loading ./Catapult/EdgeDetect_Top.v1/scverify/EdgeDetect_Top_v_msim/mgc_hls.ccs_in_wait_coupled_v1(fast__1)
+# Loading work.EdgeDetect_MagAng_run_dx_in_rsci_dx_in_wait_ctrl(fast)
+# Loading work.EdgeDetect_MagAng_run_dy_in_rsci(fast)
+# Loading ./Catapult/EdgeDetect_Top.v1/scverify/EdgeDetect_Top_v_msim/mgc_hls.ccs_in_wait_coupled_v1(fast__2)
+# Loading work.EdgeDetect_MagAng_run_dy_in_rsci_dy_in_wait_ctrl(fast)
+# Loading work.EdgeDetect_MagAng_run_pix_in_rsci(fast)
+# Loading ./Catapult/EdgeDetect_Top.v1/scverify/EdgeDetect_Top_v_msim/mgc_hls.ccs_in_wait_v1(fast__1)
+# Loading work.EdgeDetect_MagAng_run_pix_in_rsci_pix_in_wait_ctrl(fast)
+# Loading work.EdgeDetect_MagAng_run_pix_in_rsci_pix_in_wait_dp(fast)
+# Loading work.EdgeDetect_MagAng_run_dat_out_rsci(fast)
+# Loading ./Catapult/EdgeDetect_Top.v1/scverify/EdgeDetect_Top_v_msim/mgc_hls.ccs_out_wait_v1(fast__4)
+# Loading work.EdgeDetect_MagAng_run_dat_out_rsci_dat_out_wait_ctrl(fast)
+# Loading work.EdgeDetect_MagAng_run_dat_out_rsci_dat_out_wait_dp(fast)
+# Loading work.EdgeDetect_MagAng_run_crc32_pix_in_triosy_obj(fast)
+# Loading ./Catapult/EdgeDetect_Top.v1/scverify/EdgeDetect_Top_v_msim/mgc_hls.mgc_io_sync_v2(fast)
+# Loading work.EdgeDetect_MagAng_run_crc32_pix_in_triosy_obj_crc32_pix_in_triosy_wait_ctrl(fast)
+# Loading work.EdgeDetect_MagAng_run_crc32_dat_out_triosy_obj(fast)
+# Loading work.EdgeDetect_MagAng_run_crc32_dat_out_triosy_obj_crc32_dat_out_triosy_wait_ctrl(fast)
+# Loading work.EdgeDetect_MagAng_run_staller(fast)
+# Loading work.EdgeDetect_MagAng_run_run_fsm(fast)
+# ** Warning: (vsim-4029) The fifo '/scverify_top/user_tb/dout_chn_eol_golden'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/user_tb/dout_chn_sof_golden'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/user_tb/dout_chn_pix_golden'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/user_tb/crc32_hw_pix_out_golden'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/user_tb/crc32_hw_pix_in_golden'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_out_wait_ctrl_fifo_crc32_hw_pix_out'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_out_fifo_crc32_hw_pix_out'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_out_wait_ctrl_fifo_crc32_hw_pix_in'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_out_fifo_crc32_hw_pix_in'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_out_wait_ctrl_fifo_dout_chn_eol'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_out_fifo_dout_chn_eol'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_out_wait_ctrl_fifo_dout_chn_sof'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_out_fifo_dout_chn_sof'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_out_wait_ctrl_fifo_dout_chn_pix'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_out_fifo_dout_chn_pix'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_wait_ctrl_fifo_din_chn_eol'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_fifo_din_chn_eol'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_wait_ctrl_fifo_din_chn_sof'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_fifo_din_chn_sof'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_wait_ctrl_fifo_din_chn_pix'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# ** Warning: (vsim-4029) The fifo '/scverify_top/TLS_in_fifo_din_chn_pix'
+# (and any connected ports) is undebuggable as the tlm fifo size specified is '-1'. A tlm fifo with an infinite size is not debuggable.
+# Disabling STALL_FLAG toggling
+# do {./Catapult/EdgeDetect_Top.v1/scverify/EdgeDetect_Top_v_msim/scverify_msim_wave.tcl}
+# Reading SCVerify waveform database './Catapult/EdgeDetect_Top.v1/scverify/ccs_wave_signals.dat'
+# Populating WAVE window...
+#                 DONE
+# 0
+# 
+# stdin: <EOF>
+run -all
+# Loading Input File
+# Input file:          ./image/people640x360_rgb.bmp
+# Mode:                1
+# Output file (alg):   out_algorithm.bmp
+# Output file (hw):    out_hw.bmp
+# Image width: 640
+# Image height: 360
+############################################# FRAME NO.   0 ###############################################
+# Running
+# SCVerify intercepting C++ function 'EdgeDetect_Top::run' for RTL block 'EdgeDetect_Top'
+#                       DUT instance '0x2aaabb25fbe0'
+# Info: HW reset: TLS_rst active @ 0 s
+# Info: HW reset: TLS_arst_n active @ 0 s
+# Magnitude: Manhattan norm per pixel 5.357491
+# Writing algorithmic bitmap output to: out_algorithm.bmp
+# Writing bit-accurate bitmap output to: out_hw.bmp
+# sofErr: 0 eolErr: 0
+# crc32_alg_pix_in  = ebb44e76  crc32_hw_pix_in  = ebb44e76
+# crc32_alg_dat_out = 398625ad  crc32_hw_dat_out = 49e564fe
+# Finished
+# Info: Execution of user-supplied C++ testbench 'main()' has completed with exit code = 0
+# 
+# Info: Collecting data completed
+#    captured 1 values of widthIn
+#    captured 1 values of heightIn
+#    captured 1 values of sw_in
+#    captured 1 values of crc32_hw_pix_in
+#    captured 1 values of crc32_hw_pix_out
+#    captured 57600 values of din_chn_pix
+#    captured 57600 values of din_chn_sof
+#    captured 57600 values of din_chn_eol
+#    captured 57600 values of dout_chn_pix
+#    captured 57600 values of dout_chn_sof
+#    captured 57600 values of dout_chn_eol
+# Info: scverify_top/user_tb: Simulation completed
+# 
+# Checking results
+# 'crc32_hw_pix_in'
+#    capture count        = 1
+#    comparison count     = 1
+#    ignore count         = 0
+#    error count          = 0
+#    stuck in dut fifo    = 0
+#    stuck in golden fifo = 0
+# 'crc32_hw_pix_out'
+#    capture count        = 1
+#    comparison count     = 1
+#    ignore count         = 0
+#    error count          = 0
+#    stuck in dut fifo    = 0
+#    stuck in golden fifo = 0
+# 'dout_chn_pix'
+#    capture count        = 57600
+#    comparison count     = 57600
+#    ignore count         = 0
+#    error count          = 0
+#    stuck in dut fifo    = 0
+#    stuck in golden fifo = 0
+# 'dout_chn_sof'
+#    capture count        = 57600
+#    comparison count     = 57600
+#    ignore count         = 0
+#    error count          = 0
+#    stuck in dut fifo    = 0
+#    stuck in golden fifo = 0
+# 'dout_chn_eol'
+#    capture count        = 57600
+#    comparison count     = 57600
+#    ignore count         = 0
+#    error count          = 0
+#    stuck in dut fifo    = 0
+#    stuck in golden fifo = 0
+# 
+# Info: scverify_top/user_tb: Simulation PASSED @ 2309286 ns
+# ** Note: (vsim-6574) SystemC simulation stopped by user.
+# 1
+# 
+# A time value could not be extracted from the current line
+run-all
+# invalid command name "run-all"
