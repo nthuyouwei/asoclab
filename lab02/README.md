@@ -10,6 +10,8 @@ cd 03_fsic_prj_xsim/rtl/user/testbench/tc
 ./run_xsim
 source run_clean
 ```
+![image](https://github.com/nthuyouwei/asoclab/assets/145022311/aaf15037-c3d3-40a8-a849-8c036ce73a63)
+
 這會產生vcd檔可以利用gtkwave看波型。
 
 2. Questasim_vsim
