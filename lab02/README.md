@@ -1,4 +1,9 @@
+
+
 report 連結:
+
+有關report所要求的檔案catapult 部分都放在02，fsic放在03_vsim
+
 
 02_edgedetect 是我們利用catapult hls 設計出edgedetect的硬體加速ip。
 
@@ -16,6 +21,8 @@ source run_clean
 
 2. Questasim_vsim
 ```
-
+cd 03_fsic_prj_vsim/dsn/testbench/vsim
+./run_xsim
+source run_clean
 
 ```
