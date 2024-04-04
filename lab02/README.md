@@ -10,3 +10,10 @@ cd 03_fsic_prj_xsim/rtl/user/testbench/tc
 ./run_xsim
 source run_clean
 ```
+這會產生vcd檔可以利用gtkwave看波型。
+
+2. Questasim_vsim
+```
+
+
+```
