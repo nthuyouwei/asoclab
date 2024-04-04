@@ -22,7 +22,5 @@ source run_clean
 2. Questasim_vsim
 ```
 cd 03_fsic_prj_vsim/dsn/testbench/vsim
-./run_xsim
-source run_clean
-
+source run_vsim
 ```
