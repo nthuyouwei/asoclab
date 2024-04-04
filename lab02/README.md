@@ -24,3 +24,4 @@ source run_clean
 cd 03_fsic_prj_vsim/dsn/testbench/vsim
 source run_vsim
 ```
+![image](https://github.com/nthuyouwei/asoclab/assets/145022311/bb51ccee-21d6-4f56-9992-5ef060aa87ca)
