@@ -6,5 +6,7 @@ report 連結:
 
 1. vivado_xsim
 ```
-
+cd 03_fsic_prj_xsim/rtl/user/testbench/tc
+./run_xsim
+source run_clean
 ```
