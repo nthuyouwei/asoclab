@@ -19,7 +19,20 @@
 #include <defs.h>
 #include <stub.c>
 
-
+// data len = 64
+#define reg_fir_len (*(volatile uint32_t*)0x30000010)
+// TAP coeff
+#define reg_fir_coeff0  (*(volatile uint32_t*)0x30000020)
+#define reg_fir_coeff1  (*(volatile uint32_t*)0x30000024)
+#define reg_fir_coeff2  (*(volatile uint32_t*)0x30000028)
+#define reg_fir_coeff3  (*(volatile uint32_t*)0x3000002c)
+#define reg_fir_coeff4  (*(volatile uint32_t*)0x30000030)
+#define reg_fir_coeff5  (*(volatile uint32_t*)0x30000034)
+#define reg_fir_coeff6  (*(volatile uint32_t*)0x30000038)
+#define reg_fir_coeff7  (*(volatile uint32_t*)0x3000003c)
+#define reg_fir_coeff8  (*(volatile uint32_t*)0x30000040)
+#define reg_fir_coeff9  (*(volatile uint32_t*)0x30000044)
+#define reg_fir_coeff10 (*(volatile uint32_t*)0x30000048)
 // --------------------------------------------------------
 
 /*
@@ -147,7 +160,25 @@ void main()
 			j += 0x08;
 		}
 	}
-
+	
+	// set uspj1
+	//reg_fsic_cc = 0x00000001;
+	// write fir data length
+	//reg_fir_len = 64;
+	//write fir tap coef
+ /*
+	reg_fir_coeff0 	= 0;
+	reg_fir_coeff1 	= -10;
+	reg_fir_coeff2 	= -9;
+	reg_fir_coeff3 	= 23;
+	reg_fir_coeff4 	= 56;
+	reg_fir_coeff5 	= 63;
+	reg_fir_coeff6 	= 56;
+	reg_fir_coeff7 	= 23;
+	reg_fir_coeff8 	= -9;
+	reg_fir_coeff9 	= -10;
+	reg_fir_coeff10 = 0;
+*/
 	while(1) {
 		if (j==0xF) {
 			reg_mprj_datah = 0x20;
